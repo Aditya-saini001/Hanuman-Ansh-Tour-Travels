@@ -1,4 +1,4 @@
-﻿export default function FloatingButtons() {
+export default function FloatingButtons() {
   return (
     <div className="fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-[999] flex flex-col gap-2.5">
       <a
