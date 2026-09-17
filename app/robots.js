@@ -1,5 +1,5 @@
-﻿export default function robots() {
-  const baseUrl = "https://hanuman-ansh-tour-and-travels.vercel.app";
+export default function robots() {
+  const baseUrl = "https://hanuman-ansh-tour-travels.vercel.app";
 
   return {
     rules: {

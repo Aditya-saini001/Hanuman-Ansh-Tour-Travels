@@ -1,5 +1,5 @@
-﻿export default function sitemap() {
-  const baseUrl = "https://hanuman-ansh-tour-and-travels.vercel.app";
+export default function sitemap() {
+  const baseUrl = "https://hanuman-ansh-tour-travels.vercel.app";
   const lastModified = new Date();
 
   return [

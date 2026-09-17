@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -123,9 +123,11 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 title="X (Twitter)"
-                className="w-10 h-10 rounded-full bg-white/10 text-slate-300 hover:bg-white hover:text-black flex items-center justify-center text-lg transition-all hover:-translate-y-1"
+                className="w-10 h-10 rounded-full bg-white/10 text-white hover:bg-white hover:text-black flex items-center justify-center transition-all hover:-translate-y-1"
               >
-                <i className="fab fa-x-twitter"></i>
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 24.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
               </a>
 
               {/* WhatsApp */}

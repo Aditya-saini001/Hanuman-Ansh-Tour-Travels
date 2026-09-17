@@ -1,4 +1,4 @@
-﻿import { Plus_Jakarta_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -9,7 +9,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://hanuman-ansh-tour-and-travels.vercel.app"),
+  metadataBase: new URL("https://hanuman-ansh-tour-travels.vercel.app"),
   title: {
     default: "Hanuman Ansh Tour & Travels - Best Taxi Service in Dehradun",
     template: "%s | Hanuman Ansh Tour & Travels",
@@ -48,7 +48,7 @@ export const metadata = {
     title: "Hanuman Ansh Tour & Travels - Best Taxi Service in Dehradun",
     description:
       "Reliable and affordable 24/7 taxi service in Dehradun. Outstation cabs to Delhi, Mussoorie, Haridwar, Rishikesh, and sacred Chardham Yatra packages. Call +91 8077107439.",
-    url: "https://hanuman-ansh-tour-and-travels.vercel.app",
+    url: "https://hanuman-ansh-tour-travels.vercel.app",
     siteName: "Hanuman Ansh Tour & Travels",
     images: [
       {
@@ -86,10 +86,10 @@ export default function RootLayout({ children }) {
     "@context": "https://schema.org",
     "@type": ["TaxiService", "TravelAgency"],
     name: "Hanuman Ansh Tour & Travels",
-    image: "https://hanuman-ansh-tour-and-travels.vercel.app/images/logo.jpeg",
-    logo: "https://hanuman-ansh-tour-and-travels.vercel.app/images/logo.jpeg",
-    "@id": "https://hanuman-ansh-tour-and-travels.vercel.app",
-    url: "https://hanuman-ansh-tour-and-travels.vercel.app",
+    image: "https://hanuman-ansh-tour-travels.vercel.app/images/logo.jpeg",
+    logo: "https://hanuman-ansh-tour-travels.vercel.app/images/logo.jpeg",
+    "@id": "https://hanuman-ansh-tour-travels.vercel.app",
+    url: "https://hanuman-ansh-tour-travels.vercel.app",
     telephone: "+918077107439",
     priceRange: "₹₹",
     address: {
