@@ -5,6 +5,7 @@ import SectionHeader from "@/components/SectionHeader";
 import DestinationCard from "@/components/DestinationCard";
 import FaqAccordion from "@/components/FaqAccordion";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "Best Taxi Service in Dehradun - Kedarnath, Chardham Yatra, Mussoorie Cabs | Hanuman Ansh Tour & Travels",
@@ -126,6 +127,81 @@ const localRoutes = [
   "Dehradun To Chardham Taxi",
 ];
 
+const fleetVehicles = [
+  {
+    category: "Budget & City Travel",
+    title: "Sedan (Swift Dzire / Etios)",
+    image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800&auto=format&fit=crop&q=80",
+    specs: [
+      { icon: "fa-user", text: "4 Passengers" },
+      { icon: "fa-suitcase", text: "2-3 Large Bags" },
+      { icon: "fa-snowflake", text: "Dual AC Climate" },
+      { icon: "fa-circle-check", text: "Sanitized", isGreen: true },
+    ],
+    features: [
+      "Best for Couples & Small Family",
+      "High Mileage / Low Cost",
+      "Comfortable Pushback Seats",
+    ],
+    price: "₹11/km",
+    href: "/contact?dest=Sedan%20(Swift%20Dzire%20%2F%20Etios)",
+  },
+  {
+    category: "Family & Hill Travel",
+    title: "SUV (Maruti Ertiga)",
+    image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&auto=format&fit=crop&q=80",
+    specs: [
+      { icon: "fa-user", text: "6 Passengers" },
+      { icon: "fa-suitcase", text: "4 Large Bags" },
+      { icon: "fa-fan", text: "Roof AC Vents" },
+      { icon: "fa-circle-check", text: "Sanitized", isGreen: true },
+    ],
+    features: [
+      "Extra Legroom for Hills",
+      "Carrier for Luggage",
+      "Smooth Mountain Suspension",
+    ],
+    price: "₹14/km",
+    href: "/contact?dest=SUV%20(Maruti%20Ertiga)",
+  },
+  {
+    category: "Premium & Chardham Yatra",
+    title: "Luxury SUV (Toyota Innova Crysta)",
+    image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&auto=format&fit=crop&q=80",
+    specs: [
+      { icon: "fa-user", text: "7 Passengers" },
+      { icon: "fa-suitcase", text: "5 Large Bags" },
+      { icon: "fa-snowflake", text: "Automatic Climate Control" },
+      { icon: "fa-circle-check", text: "Sanitized", isGreen: true },
+    ],
+    features: [
+      "Captain Seat Luxury",
+      "Ideal for Kedarnath & Yatra",
+      "Top Safety Rating & Comfort",
+    ],
+    price: "₹18/km",
+    href: "/contact?dest=Luxury%20SUV%20(Toyota%20Innova%20Crysta)",
+  },
+  {
+    category: "Group Tours & Corporate",
+    title: "Tempo Traveller (12 to 26 Seater)",
+    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop&q=80",
+    specs: [
+      { icon: "fa-user", text: "12-26 Passengers" },
+      { icon: "fa-box-archive", text: "Massive Boot Space" },
+      { icon: "fa-music", text: "Individual AC & Music System" },
+      { icon: "fa-circle-check", text: "Sanitized", isGreen: true },
+    ],
+    features: [
+      "Reclining Pushback Seats",
+      "LED TV & Sound System",
+      "Long Distance Group Comfort",
+    ],
+    price: "₹25/km",
+    href: "/contact?dest=Tempo%20Traveller%20(12%20to%2026%20Seater)",
+  },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -169,8 +245,95 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Choose Your Travel Vehicle (Our Maintained Fleet) */}
+      <section className="py-14 sm:py-16 bg-white border-b border-slate-200">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="inline-block bg-amber-50 text-amber-800 text-xs sm:text-sm font-extrabold px-5 py-1.5 rounded-full mb-3 uppercase tracking-wider border border-amber-200 shadow-xs">
+              OUR MAINTAINED FLEET
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-secondary tracking-tight mb-3">
+              Choose Your Travel Vehicle
+            </h2>
+            <p className="text-slate-600 text-sm sm:text-base font-medium leading-relaxed">
+              Clean, sanitized, and commercial permit vehicles with verified GPS tracking and professional chauffeurs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {fleetVehicles.map((v) => (
+              <div
+                key={v.title}
+                className="bg-white rounded-2xl border border-slate-200 shadow-card overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-primary/40"
+              >
+                <div>
+                  <div className="relative w-full h-48 overflow-hidden bg-slate-100">
+                    <span className="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-300 text-[11px] font-bold px-3 py-1 rounded-full shadow-md z-10 uppercase tracking-wide border border-white/10">
+                      {v.category}
+                    </span>
+                    <Image
+                      src={v.image}
+                      alt={v.title}
+                      fill
+                      className="object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+
+                  <div className="p-5">
+                    <h3 className="text-base sm:text-lg font-black text-secondary mb-3 leading-snug">
+                      {v.title}
+                    </h3>
+
+                    <div className="grid grid-cols-2 gap-2 text-[11px] text-slate-600 font-semibold mb-4 bg-slate-50 p-2.5 rounded-xl border border-slate-100">
+                      {v.specs.map((s, idx) => (
+                        <div key={idx} className="flex items-center gap-1.5 truncate">
+                          {s.isGreen ? (
+                            <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block flex-shrink-0"></span>
+                          ) : (
+                            <i className={`fas ${s.icon} text-amber-500 text-xs w-3.5 flex-shrink-0`}></i>
+                          )}
+                          <span className="truncate">{s.text}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <ul className="space-y-1.5 text-xs text-slate-600 font-medium mb-2">
+                      {v.features.map((f, idx) => (
+                        <li key={idx} className="flex items-start gap-1.5">
+                          <i className="fas fa-check-circle text-emerald-500 text-xs mt-0.5 flex-shrink-0"></i>
+                          <span>{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="p-5 pt-0">
+                  <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
+                    <div>
+                      <span className="text-slate-400 text-[10px] font-bold block uppercase tracking-wider">
+                        Starting
+                      </span>
+                      <span className="text-secondary font-black text-base sm:text-lg">
+                        {v.price}
+                      </span>
+                    </div>
+                    <Link
+                      href={v.href}
+                      className="bg-secondary hover:bg-primary text-white font-extrabold text-xs px-4 py-2 rounded-xl shadow transition-all hover:scale-105 active:scale-95 flex items-center gap-1"
+                    >
+                      Book →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Outstation Taxi Service Section */}
-      <section className="py-14 sm:py-16 bg-white">
+      <section className="py-14 sm:py-16 bg-light-bg">
         <div className="max-w-6xl mx-auto px-4">
           <SectionHeader
             title="Outstation Taxi Service"

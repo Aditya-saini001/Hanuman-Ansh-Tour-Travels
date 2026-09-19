@@ -1,9 +1,12 @@
-# Hanuman-Ansh-Tour-Travels— Next.js + Tailwind CSS
+# Shanvi Tour & Travels — Next.js + Tailwind CSS
+
+Aapki purani HTML/CSS/JS (Bootstrap-based) website ka pura Next.js 14 (App Router) +
+Tailwind CSS mein conversion.
 
 ## Project Structure
 
 ```
-Hanuman Ansh-travels/
+shanvi-travels/
 ├── app/
 │   ├── layout.js              # Root layout (fonts, Font Awesome, metadata)
 │   ├── globals.css            # Tailwind + custom scrollbar/animations
@@ -30,7 +33,7 @@ Hanuman Ansh-travels/
 ## Run It Locally
 
 ```bash
-cd Hanuman Ansh-travels
+cd shanvi-travels
 npm install
 npm run dev
 ```
