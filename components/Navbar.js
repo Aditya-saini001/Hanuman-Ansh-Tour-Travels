@@ -24,8 +24,8 @@ export default function Navbar() {
       <div className="bg-secondary text-slate-200 text-xs sm:text-[0.92rem] font-semibold py-2.5 border-b border-white/10">
         <div className="max-w-6xl mx-auto px-4 flex flex-wrap justify-between items-center gap-2">
           <div className="flex items-center gap-1.5 truncate">
-            <i className="fas fa-map-marker-alt text-accent"></i>
-            <span>Transport Nagar, Dehradun</span>
+            <i className="fas fa-taxi text-accent"></i>
+            <span className="font-bold text-white">Best Taxi Service in Dehradun</span>
           </div>
           <div className="flex items-center gap-2">
             <span>📞 Call 24/7:</span>
@@ -91,13 +91,13 @@ export default function Navbar() {
               );
             })}
             <li className="lg:ml-2 mt-2 lg:mt-0">
-              <Link
-                href="/contact"
+              <a
+                href="tel:+918077107439"
                 onClick={() => setOpen(false)}
                 className="inline-flex items-center justify-center w-full lg:w-auto bg-gradient-to-br from-accent to-accent-hover text-white rounded-full px-5 py-2.5 font-extrabold shadow-[0_4px_15px_rgba(245,158,11,0.4)] transition-transform hover:-translate-y-0.5 active:scale-95"
               >
-                <i className="fas fa-taxi mr-1.5"></i> Book Now
-              </Link>
+                <i className="fas fa-phone mr-1.5"></i> Call Now
+              </a>
             </li>
           </ul>
         </div>
