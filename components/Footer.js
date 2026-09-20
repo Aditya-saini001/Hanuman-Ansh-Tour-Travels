@@ -97,7 +97,7 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               {/* Facebook */}
               <a
-                href="https://facebook.com/#"
+                href="https://www.facebook.com/share/18rq23HnKx/"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Facebook"
@@ -108,7 +108,7 @@ export default function Footer() {
 
               {/* Instagram */}
               <a
-                href="https://instagram.com/#"
+                href="https://www.instagram.com/hanuman_ansh_tour_travels?stkn=MThhc3B5dnBnZnd0Zw=="
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Instagram"
